@@ -935,7 +935,7 @@ def bot(op):
                 midd = msg.text.replace("finvite ","")
                 kc.findAndAddContactsByMid(midd)
                 kc.inviteIntoGroup(msg.to,[midd])
-            elif msg.text in ["Bot?"]:
+            elif msg.text in ["Bot???"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': mid}
                 cl.sendMessage(msg)
@@ -1858,9 +1858,9 @@ def bot(op):
             elif msg.text in ["Sini dong","Kuy join","Ayo masuk"]:
               if msg.from_ in admin:
                         G = cl.getGroup(msg.to)
-                        ginfo = cl.getGroup(msg.to)
+                        ginfo = cl,ki,kk.getGroup(msg.to)
                         G.preventJoinByTicket = False
-                        cl.updateGroup(G)
+                        cl,ki,kk.updateGroup(G)
                         invsend = 0
                         Ticket = cl.reissueGroupTicket(msg.to)
                         ki.acceptGroupInvitationByTicket(msg.to,Ticket)
@@ -2004,7 +2004,7 @@ def bot(op):
     #-------------Fungsi Leave Group Finish---------------#
     
     #-------------Fungsi Tag All Start---------------#
-            elif msg.text in ["Taggg","Mention"]:
+            elif msg.text in ["Taggg","Mention","Panggill"]:
                   group = cl.getGroup(msg.to)
                   nama = [contact.mid for contact in group.members]
 
@@ -2063,9 +2063,8 @@ def bot(op):
                     gs = ki.getGroup(msg.to)
                     gs = kk.getGroup(msg.to)
                     gs = kc.getGroup(msg.to)
-                    ki.sendText(msg.to,"maaf kalo gak sopan")
+                    ki.sendText(msg.to,"Haii!")
                     kk.sendText(msg.to,"makasih semuanya..")
-                    kc.sendText(msg.to,"hehehhehe")
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': mid}
                     ks.sendMessage(msg)
@@ -2236,7 +2235,7 @@ def bot(op):
                 ki.sendText(msg.to,"dasar jones 􀜁􀅔Har Har􏿿")
             elif msg.text in ["Bobo ah","Bobo dulu ah"]:
                 cl.sendText(msg.to,"Have a nice dream :)")
-                kk.sendText(msg.to,"Byee~")
+                ke.sendText(msg.to,"Byee~")
                 ki.sendText(msg.to,"􀜁􀅔Har Har􏿿")
             elif msg.text in ["Cinta"]:
                 cl.sendText(msg.to,"Cinta i ususmu minum yak*** tiap hari~~")
@@ -2244,6 +2243,13 @@ def bot(op):
             elif msg.text in ["#welcome"]:
                 ki.sendText(msg.to,"Selamat datang")
                 kk.sendText(msg.to,"Jangan nakal ya!")
+            elif msg.text in ["Bacot"]:
+                ke.sendText(msg.to,"Dasar berisik!")
+                ka.sendText(msg.to,"Awas mulut lu dower...")
+            elif msg.text in ["Bangsat"]:
+                ko.sendText(msg.to,"Cot")
+                ks.sendText(msg.to,"kasar njir")
+                ke.sendText(msg.to,"uuwuu..")
 #-----------------------------------------------
             elif msg.text in ["PING","Ping","ping"]:
                 ki.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
