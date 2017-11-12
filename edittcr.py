@@ -219,11 +219,11 @@ def autolike():
                 ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                 kc.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                 kg.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-                cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me/ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
-                kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me/ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
-                ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me/ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
-                kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me/ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
-                kg.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me/ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
+                cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like")
+                kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like")
+                ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like")
+                kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like")
+                kg.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like")
                 print "Like"
             except:
                 pass
@@ -588,11 +588,11 @@ def bot(op):
                 else:
                     cl.sendText(msg.to, "you not staff or admin")
 #-----------------------[Group Name Section]------------------------
-            elif "Sunysz Gn " in msg.text:
+            elif "Gn " in msg.text:
                 if msg.toType == 2:
                     if msg.from_ in staff:
                         X = cl.getGroup(msg.to)
-                        X.name = msg.text.replace("Sunysz Gn ","")
+                        X.name = msg.text.replace("Gn ","")
                         random.choice(KAC).updateGroup(X)
                         print "[Command]Gn executed"
                     else:
@@ -602,11 +602,11 @@ def bot(op):
                 else:
                     cl.sendText(msg.to,"It can't be used besides the group.")
                     print "Gn executed outside group chat"
-            elif "Sunysz gn " in msg.text:
+            elif "gn " in msg.text:
                 if msg.toType == 2:
                     if msg.from_ in staff:
                         X = cl.getGroup(msg.to)
-                        X.name = msg.text.replace("Sunysz gn ","")
+                        X.name = msg.text.replace("gn ","")
                         random.choice(KAC).updateGroup(X)
                         print "[Command]Gn executed"
                     else:
@@ -617,9 +617,9 @@ def bot(op):
                     cl.sendText(msg.to,"It can't be used besides the group.")
                     print "Gn executed outside group chat"
 #-----------------------[Kick Section]------------------------
-            elif "Sunysz Kick @" in msg.text:
+            elif "Kick @" in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Sunysz Kick @","")
+                    midd = msg.text.replace("Kick @","")
                     cl.kickoutFromGroup(msg.to,[midd])
                     kk.kickoutFromGroup(msg.to,[midd])
                     ki.kickoutFromGroup(msg.to,[midd])
@@ -631,9 +631,9 @@ def bot(op):
                     cl.sendText(msg.to,"Command denied.")
                     cl.sendText(msg.to,"Admin permission required.")
                     print "[Error]Command denied - Admin permission required"
-            elif "Sunysz kick @" in msg.text:
+            elif "kick @" in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Sunysz kick @","")
+                    midd = msg.text.replace("kick @","")
                     cl.kickoutFromGroup(msg.to,[midd])
                     kk.kickoutFromGroup(msg.to,[midd])
                     ki.kickoutFromGroup(msg.to,[midd])
@@ -645,7 +645,7 @@ def bot(op):
                     cl.sendText(msg.to,"Command denied.")
                     cl.sendText(msg.to,"Admin permission required.")
                     print "[Error]Command denied - Admin permission required"
-            elif msg.text in ["Sunysz Kill ban","Sunysz kill ban"]:
+            elif msg.text in ["Kill ban","kill ban"]:
                 if msg.toType == 2:
                     if msg.from_ in admin:
                         group = cl.getGroup(msg.to)
@@ -667,7 +667,7 @@ def bot(op):
                         cl.sendText(msg.to,"Admin permission required.")
                         print "[Error]Command denied - Admin permission required"
 #-----------------------[Send Profile Section]------------------------                    
-            elif msg.text in ["Sunysz Bot all","Sunysz bot all"]:
+            elif msg.text in ["Bot all","bot all"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': mid}
                 cl.sendMessage(msg)
@@ -680,33 +680,33 @@ def bot(op):
                 msg.contentMetadata = {'mid': Dmid}
                 kg.sendMessage(msg)
                 print "[Command]Bot all executed"
-            elif msg.text in ["Sunysz Bot 1","Sunysz bot 1"]:
+            elif msg.text in ["Bot 1","bot 1"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': mid}
                 cl.sendMessage(msg)
                 print "[Command]Bot 1 executed"
-            elif msg.text in ["Sunysz Bot 2","Sunysz bot 2"]:
+            elif msg.text in ["Bot 2","bot 2"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': Amid}
                 kk.sendMessage(msg)
                 print "[Command]Bot 2 executed"
-            elif msg.text in ["Sunysz Bot 3","Sunysz bot 3"]:
+            elif msg.text in ["Bot 3","bot 3"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': Bmid}
                 ki.sendMessage(msg)
                 print "[Command]Bot 3 executed"
-            elif msg.text in ["Sunysz Bot 4","Sunysz bot 4"]:
+            elif msg.text in ["Bot 4","bot 4"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': Cmid}
                 kc.sendMessage(msg)
                 print "[Command]Bot 4 executed"
-            elif msg.text in ["Sunysz Bot 5","Sunysz bot 5"]:
+            elif msg.text in ["Bot 5","bot 5"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': Dmid}
                 kg.sendMessage(msg)
                 print "[Command]Bot 5 executed"
 #-----------------------[Cancel invitation Section]------------------------
-            elif msg.text in ["Sunysz cancel","Sunysz Cancel"]:
+            elif msg.text in ["cancelll","Cancelll"]:
                 if msg.toType == 2:                    
                     X = cl.getGroup(msg.to)
                     cl.sendText(msg.to,"Canceling all pending(s) invitation")
@@ -727,7 +727,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
 #-----------------------[Group link Section]------------------------                        
-            elif msg.text in ["Sunysz Glink off","Sunysz Link off","Sunysz glink off","Sunysz link off"]:
+            elif msg.text in ["Glink off","Link off","glink off","link off"]:
                 if msg.toType == 2:
                     if msg.from_ in staff:
                         X = cl.getGroup(msg.to)
@@ -750,7 +750,7 @@ def bot(op):
                         print "[Command]Glink off executed outside group chat"
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Sunysz Glink on","Sunysz Link on","Sunysz glink on","Sunysz link on"]:
+            elif msg.text in ["Glink on","Link on","glink on","link on"]:
                 if msg.toType == 2:
                     if msg.from_ in staff:
                         X = cl.getGroup(msg.to)
@@ -773,7 +773,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
 #-----------------------[Group info Section]------------------------
-            elif msg.text in ["Sunysz Gc","Sunysz gc","Sunysz gcreator"]:
+            elif msg.text in ["Gc","gc","gcreator"]:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -793,7 +793,7 @@ def bot(op):
                         msg.contentType = 13
                         msg.contentMetadata = {'mid': gCreator}
                         cl.sendMessage(msg)
-            elif msg.text in ["Sunysz Ginfo","Sunysz ginfo"]:
+            elif msg.text in ["Ginfo","ginfo"]:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -852,20 +852,20 @@ def bot(op):
                 cl.sendText(msg.to,msg.from_)
                 print "[Command]Yid executed"
 #-----------------------[Send Contact Section]------------------------
-            elif "Sunysz Contact " in msg.text:
+            elif "Contact " in msg.text:
                 mmid = msg.text.replace("Sunysz Contact ","")
                 msg.contentType = 13
                 msg.contentMetadata = {"mid":mmid}
                 cl.sendMessage(msg)
                 print "[Command]Contact executed"
-            elif "Sunysz contact " in msg.text:
+            elif "contact " in msg.text:
                 mmid = msg.text.replace("Sunysz contact ","")
                 msg.contentType = 13
                 msg.contentMetadata = {"mid":mmid}
                 cl.sendMessage(msg)
                 print "[Command]Contact executed"
 #-----------------------[Auto Join Section]------------------------
-            elif msg.text in ["Sunysz Join on","Sunysz join on"]:
+            elif msg.text in ["Join on","join on"]:
                 if wait["autoJoin"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Auto join already on")
@@ -897,7 +897,7 @@ def bot(op):
                         kc.sendText(msg.to,"Auto join turned on")
                         kg.sendText(msg.to,"Auto join turned on")
                         print "Join on executed"
-            elif msg.text in ["Sunysz Join off","Sunysz join off"]:
+            elif msg.text in ["Join off","join off"]:
                 if wait["autoJoin"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Auto join already off")
@@ -921,7 +921,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Auto join turned off")
                         print "[Command]Join off executed"
-            elif msg.text in ["Sunysz Backup on","Sunysz backup on"]:
+            elif msg.text in ["Backup on","backup on"]:
                 if msg.from_ in admin:
                     wait["backup"] == True
                     cl.sendText(msg.to,"Backup mode already on")
@@ -933,7 +933,7 @@ def bot(op):
                 else:
                     cl.sendText(msg.to,"Command denied.")
                     cl.sendText(msg.to,"Admin permission required.")
-            elif msg.text in ["Sunysz Backup off","Sunysz backup off"]:
+            elif msg.text in ["Backup off","backup off"]:
                 if msg.from_ in admin:
                     wait["backup"] == False
                     cl.sendText(msg.to,"Backup mode already off")
@@ -954,7 +954,7 @@ def bot(op):
                     cl.sendText(msg.to,"Command denied.")
                     cl.sendText(msg.to,"Admin permission required.")
                     print "[Error]Command denied - Admin permission required"
-            elif msg.text in ["Sunprotection off","Sunysz Protection off"]:
+            elif msg.text in ["Sunprotection off","Protection off"]:
                 if msg.from_ in admin:
                     wait["Protect off","Prt off"] == False
                     cl.sendText(msg.to,"Protect members is now off")
@@ -1112,7 +1112,7 @@ def bot(op):
                 if msg.toType == 2:
                     if msg.from_ in admin:
                         print "[Command]Cleanse executing"
-                        _name = msg.text.replace("Sunysz cleanse","")
+                        _name = msg.text.replace("cleanse","")
                         gs = ki.getGroup(msg.to)
                         gs = kk.getGroup(msg.to)
                         gs = kc.getGroup(msg.to)
@@ -1695,7 +1695,7 @@ def bot(op):
                 else:md+=" 》Comment : off􀜁􀄯ok􏿿\n"
                 cl.sendText(msg.to,md)
 #-----------------------[Bot speed test Section]------------------------
-            elif msg.text in ["Sp","Speed all","Sunysz sp all","Sunysz speed all"]:
+            elif msg.text in ["Sp","Speed all","sp all","speed all"]:
                 if msg.from_ in staff:
                     start = time.time()
                     cl.sendText(msg.to, "Bot 1 Processing Request...")                    
@@ -1869,7 +1869,7 @@ def bot(op):
                 else:
                     cl.sendText(msg.to,"Command denied.")
                     cl.sendText(msg.to,"Admin permission required.")
-            elif msg.text in ["Sunysz Stafflist","Sunysz stafflist"]:
+            elif msg.text in ["Stafflist","stafflist"]:
                 if staff == []:
                     cl.sendText(msg.to,"The stafflist is empty")
                 else:
@@ -2756,11 +2756,11 @@ def likePost():
                     ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     kc.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     kg.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me.ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
-                    kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me.ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
-                    ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me.ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
-                    kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me.ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
-                    kg.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by SUNYSZ\n>> line.me.ti/p/~rizal.pratama20\n>> line.me.ti/p/~rizalpratama20")
+                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto")
+                    kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like")
+                    ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like")
+                    kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like")
+                    kg.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like")
                     print "Like"
                 except:
                     pass
